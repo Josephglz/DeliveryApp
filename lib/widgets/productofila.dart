@@ -19,7 +19,7 @@ class ProductoFila extends StatelessWidget
       {
         Navigator.push(context, MaterialPageRoute(
           builder: (c) {
-            return VerProducto(imagen: imagen, tag: titulo, descripcion: descripcion);
+            return VerProducto(imagen: imagen, tag: titulo, descripcion: descripcion, precio: precio);
           }
           ),
         );
