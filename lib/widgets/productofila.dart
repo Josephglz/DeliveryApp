@@ -1,3 +1,4 @@
+import 'package:appdelivery/vistas/verproducto.dart';
 import 'package:flutter/material.dart';
 
 class ProductoFila extends StatelessWidget
@@ -13,7 +14,17 @@ class ProductoFila extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return GestureDetector(
+      onTap: ()
+      {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (c) {
+            return VerProducto(imagen: imagen, tag: titulo, descripcion: descripcion);
+          }
+          ),
+        );
+      },
+      child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Row(
@@ -57,11 +68,16 @@ class ProductoFila extends StatelessWidget
                   width: 25,
                 ),
 
-                Image.asset(
-                  'assets/images/' + imagen,
-                  fit: BoxFit.cover,
-                  width: 120,
-                  height: 120,
+                Container(
+                  child: Hero(
+                    tag: titulo,
+                    child: Image.asset(
+                      'assets/images/' + imagen,
+                      fit: BoxFit.cover,
+                      width: 120,
+                      height: 120,
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -72,6 +88,7 @@ class ProductoFila extends StatelessWidget
               margin: const EdgeInsets.only(top: 12),
             ),
       ],
+      ),
     );
         
 
