@@ -118,7 +118,9 @@ class VerProductoState extends State<VerProducto>{
         ),
         width: MediaQuery.of(context).size.width,
         child: ElevatedButton(
-          onPressed: () {  },
+          onPressed: () { 
+            Navigator.pop(context);
+           },
           child: Text('Agregar ' + contador.toString() + ' al carrito * MXN' + (contador*widget.precio).toStringAsFixed(2), textAlign: TextAlign.center),
           style:
           ElevatedButton.styleFrom(

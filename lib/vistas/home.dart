@@ -7,12 +7,13 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
-
+  final double preciototal = 0.0;
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  double total = 0.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
