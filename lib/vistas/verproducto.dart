@@ -50,7 +50,11 @@ class VerProductoState extends State<VerProducto>{
           SizedBox(
             height: 20,
           ),
-          Text(widget.descripcion
+          
+          Text(widget.descripcion,
+            style: TextStyle(
+              fontSize: 20,
+            ),
           ),
 
           SizedBox(
@@ -121,7 +125,7 @@ class VerProductoState extends State<VerProducto>{
           onPressed: () { 
             Navigator.pop(context);
            },
-          child: Text('Agregar ' + contador.toString() + ' al carrito * MXN' + (contador*widget.precio).toStringAsFixed(2), textAlign: TextAlign.center),
+          child: Text('Agregar ' + contador.toString() + ' al carrito • MXN' + (contador*widget.precio).toStringAsFixed(2), textAlign: TextAlign.center),
           style:
           ElevatedButton.styleFrom(
             primary: Colors.black,

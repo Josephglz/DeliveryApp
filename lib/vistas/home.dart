@@ -32,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
       ),
       body: Container(
+        padding: const EdgeInsets.only(top: 10, left: 20),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
